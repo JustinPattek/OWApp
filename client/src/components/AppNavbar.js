@@ -12,35 +12,36 @@ import {
 
 class AppNavbar extends Component {
     state = {
-        isOpen: false
-    }
+            isOpen: false
+    }  
     
     toggle = () => {
         this.setState({
             isOpen: !this.state.isOpen
         });
-    }  
+    }
 
-    render() {
-        return (
+    render(){
+        return(
             <div>
-            <Navbar color="dark" dark expand="sm" className="mb-5">
+                <Navbar color="dark" dark expand="sm" className="mb-5">
                 <Container>
-                    <NavbarBrand href="/">LeagueList</NavbarBrand>
+                    <NavbarBrand href="/">Select a team</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="ml-auto" navbar>
-                            <NavItem>
-                                <NavLink href="http://google.com">Google</NavLink>
-                            </NavItem>
-                        </Nav>
+                    <Nav className="ml-auto" navbar>
+                    <NavItem>
+                        <NavLink href="https://github.com/justinpattek">
+                        Github
+                        </NavLink>
+                    </NavItem>
+                    </Nav>
                     </Collapse>
                 </Container>
-            </Navbar>
-        </div>
+                </Navbar>
+            </div>
         );       
     }
 }
-
 
 export default AppNavbar;
